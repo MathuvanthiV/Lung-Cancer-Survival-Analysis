@@ -1,50 +1,34 @@
-**Survival Analysis Project**
- **Project Overview**
+# Survival Analysis Project  
 
-This project applies Survival Analysis techniques on the veteran lung cancer dataset to study factors that influence patient survival. I used Kaplan-Meier estimators, Cox proportional hazards models, and interaction effects to explore how treatment type, age, performance score, and tumor cell type affect survival outcomes.
+## Project Overview  
+In this project, I worked with the **veteran lung cancer dataset** to understand what factors influence patient survival. I applied survival analysis methods like **Kaplan-Meier curves** and **Cox proportional hazards models** to compare treatments, performance scores, and tumor types. I also looked at interaction effects to see how treatment responses varied across different subgroups.  
 
- **Methods & Tools**
+## Methods & Tools  
+- R (survival package)  
+- Kaplan-Meier curves for group survival comparison  
+- Cox proportional hazards model (with and without interactions)  
+- Forest plots to visualize hazard ratios  
+- Survival curve predictions for individual patients  
 
-R Programming (survival package)
+## Key Results & Insights  
+- The experimental *Test* treatment didn’t show a significant survival benefit over the standard one.  
+- **Karnofsky performance score** was the strongest predictor of survival — patients with higher scores lived longer.  
+- Tumor type made a big difference: Small Cell and Adeno cancers were linked with much poorer outcomes than Squamous or Large cell.  
+- When I added interactions, I noticed treatment effects varied by tumor type, especially for Small Cell patients.  
+- The Cox model had a concordance of about 0.73, which means it could rank patients by survival risk reasonably well.  
 
-Kaplan-Meier Curves for group comparisons
+## Example Prediction  
+For a **65-year-old patient** with a **Karnofsky score of 80** and **Small Cell cancer**, the model predicted:  
+- Median survival: ~133 days  
+- Hazard ratio slightly above 1 (so, higher risk than baseline)  
 
-Cox Proportional Hazards Model (unadjusted & with interactions)
+## Visualizations  
+- Kaplan-Meier curves by tumor type and performance score  
+- Adjusted survival curves comparing treatments  
+- Forest plots of hazard ratios  
+- Predicted survival curves for sample patients  
 
-Forest plots for visualizing hazard ratios
+## Takeaways  
+This project showed me how powerful survival analysis is in medical research. Instead of just looking at averages, it helps explain how different factors affect *time-to-event* outcomes. The main lesson here was that **clinical factors (tumor type and performance status) mattered much more than treatment type**.  
 
-Predicted survival curves for example patients
-
- **Key Results & Insights**
-
-Treatment Effect: The experimental “Test” treatment did not significantly improve survival compared to the standard treatment.
-
-Performance Status (Karnofsky Score): Strongest predictor of survival — patients with higher scores had consistently better outcomes.
-
-Tumor Cell Type: Adeno and Small Cell types had much poorer survival compared to Squamous and Large cell tumors.
-
-Interactions: The effect of treatment varied by tumor type, especially for Small Cell patients, highlighting potential treatment-specific biology.
-
-Model Fit: The Cox model achieved good concordance (~0.73), showing reliable predictive ability.
-
-** Example Prediction**
-
-For a 65-year-old patient with a Karnofsky score of 80 and Small Cell cancer, the model predicted a median survival of ~133 days, with a hazard ratio slightly above 1 compared to baseline.
-
-** Visualizations**
-
-Kaplan-Meier survival curves by tumor type and performance score
-
-Adjusted survival curves by treatment
-
-Forest plots of hazard ratios
-
-Predicted survival curve for a sample patient
-
- **Takeaways**
-
-Clinical characteristics (tumor type, performance status) have much greater influence on survival than treatment type in this dataset.
-
-Survival analysis is a powerful tool for healthcare analytics, going beyond averages to model time-to-event outcomes.
-
-This project strengthened my skills in statistical modeling, medical data interpretation, and R visualization.
+It was a great way to practice working with real-world data, build survival models in R, and create visualizations that make results easy to understand.  
